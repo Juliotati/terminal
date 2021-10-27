@@ -1,10 +1,8 @@
 {
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
+    "actions": [
         {
-            "command": 
-            {
+            "command": {
                 "action": "copy",
                 "singleLine": false
             },
@@ -19,8 +17,7 @@
             "keys": "ctrl+v"
         },
         {
-            "command": 
-            {
+            "command": {
                 "action": "splitPane",
                 "split": "auto",
                 "splitMode": "duplicate"
@@ -31,12 +28,10 @@
     "alwaysOnTop": false,
     "copyFormatting": "none",
     "copyOnSelect": true,
-    "defaultProfile": "{1df0f8ec-a145-573d-b389-1569c2622ebb}",
-    "profiles": 
-    {
+    "defaultProfile": "{08f32fc8-0eca-493a-aae9-61ea3f46306d}",
+    "profiles": {
         "defaults": {},
-        "list": 
-        [
+        "list": [
             {
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -56,35 +51,49 @@
                 "source": "Windows.Terminal.Azure"
             },
             {
-                "guid":  "{1df0f8ec-a145-573d-b389-1569c2622ebb}",
+                "acrylicOpacity": 0.95,
                 "commandline": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\" -i -l",
+                "cursorColor": "#30DD87",
+                "font": {
+                    "weight": "normal"
+                },
+                "guid": "{1df0f8ec-a145-573d-b389-1569c2622ebb}",
                 "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
                 "name": "Bash",
+                "startingDirectory": "C:\\Users\\user\\Desktop",
+                "suppressApplicationTitle": true,
+                "tabTitle": "_juliotati | HAVE FUN",
+                "useAcrylic": false
+            },
+            {
+                "acrylicOpacity": 0.99,
+                "commandline": "\"C:\\Program Files\\Git\\usr\\bin\\bash.exe\" -i -l",
+                "cursorColor": "#30DD87",
                 "experimental.retroTerminalEffect": true,
                 "font": {
                     "weight": "light"
                 },
-                "useAcrylic": true,
+                "guid": "{08f32fc8-0eca-493a-aae9-61ea3f46306d}",
+                "icon": "C:\\Program Files\\Git\\mingw64\\share\\git\\git-for-windows.ico",
+                "name": "Bash - Retro",
+                "startingDirectory": "C:\\Users\\user\\Desktop",
                 "suppressApplicationTitle": true,
-                "acrylicOpacity": 0.95,
-                "cursorColor" :"#30dd87",
-                "unfocusedAppearance": {
-                   "experimental.retroTerminalEffect": true
-                },
                 "tabTitle": "_juliotati | HAVE FUN",
-                "startingDirectory": "C:\\Users\\user\\Desktop"
+                "unfocusedAppearance": {
+                    "experimental.retroTerminalEffect": true
+                },
+                "useAcrylic": true
             }
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
             "blue": "#0037DA",
             "brightBlack": "#767676",
             "brightBlue": "#3B78FF",
-            "brightCyan": "#30dd87",
+            "brightCyan": "#30DD87",
             "brightGreen": "#16C60C",
             "brightPurple": "#B4009E",
             "brightRed": "#E74856",
