@@ -1,0 +1,39 @@
+## Aliases
+
+### opensite
+
+function open_website() {
+    local website=$1
+    if [[ $website != https://* ]]; then
+        website="https://$website"
+    fi
+    open "$website" # Use 'xdg-open' on Linux and 'start' on Windows
+}
+
+alias opensite=open_website
+
+### fo (find out)
+
+function urlencode() {
+    local raw="$*"
+    local encoded=""
+    local pos c o
+
+    for (( pos=0 ; pos<${#raw} ; pos++ )); do
+        c=${raw:$pos:1}
+        case "$c" in
+            [-_.~a-zA-Z0-9] ) o="${c}" ;;
+            * )               printf -v o '%%%02x' "'$c"
+        esac
+        encoded+="${o}"
+    done
+    echo "${encoded}"    # You can also directly return the value for use in script
+    REPLY="${encoded}"
+}
+
+function web_search() {
+    local query="$*"
+    lynx "https://lite.duckduckgo.com/lite/?q=$(urlencode "$query")"
+}
+
+alias fo=web_search
